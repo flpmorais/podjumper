@@ -1,0 +1,14 @@
+---
+name: mariadb-main
+vars:
+  MYSQL_DATABASE:   main
+  MYSQL_CHARSET:    utf8mb4
+  MYSQL_COLLATION:  tf8mb4_general_ci
+secrets:
+  - MYSQL_ROOT_PASSWORD
+  - MYSQL_USER
+  - MYSQL_PASSWORD
+volumes: 
+  main: /var/lib/mysql
+  logs: /var/lib/mysql/mysql-bin
+...
